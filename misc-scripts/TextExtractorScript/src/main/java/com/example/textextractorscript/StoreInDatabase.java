@@ -8,6 +8,7 @@ import java.sql.SQLException;
 public class StoreInDatabase {
     public static void storeTextInDatabase(String pdfName, String textContent) throws SQLException {
         String url = "jdbc:mysql://localhost:3306/pdf_database";
+//        String url = "jdbc:mysql://localhost:3306//pdf";
         String user = "root";
         String password = "compile1";
 
@@ -16,7 +17,8 @@ public class StoreInDatabase {
                      "INSERT INTO pdf_data (pdf_name, text_content) VALUES (?, ?)")) {
 
             // Create the table if it does not exist
-            preparedStatement.executeUpdate("CREATE TABLE IF NOT EXISTS pdf_data (pdf_name VARCHAR(255), text_content TEXT)");
+            preparedStatement.execute("USE pdf_database");
+            preparedStatement.executeUpdate("CREATE TABLE IF NOT EXISTS pdf_data (pdf_name TEXT, text_content TEXT)");
 
             // Insert data into the database
             preparedStatement.setString(1, pdfName);
