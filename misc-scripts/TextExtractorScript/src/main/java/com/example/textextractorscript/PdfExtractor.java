@@ -38,20 +38,28 @@ public class PdfExtractor {
 
     private static void WriteLocal(InputStream body, String destinationFIle) throws IOException {
         FileOutputStream fos = new FileOutputStream(destinationFIle);
+
+//        body.close();
         fos.write(body.readAllBytes());
         fos.close();
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
         // Replace "path/to/your/pdf/file.pdf" with the actual path to your PDF file
-        String DbName = "MIT_physics";
 
-        String FilePathAl = String.format("C:\\Final Year Project\\final-year-project-dump\\dataset\\PDF\\%s",DbName+".pdf");
-        String FilePath = String.format("C:\\Final Year Project\\final-year-project-dump\\misc-scripts\\TextExtractorScript\\PDF\\%s",DbName+".pdf");
-        System.out.println(FilePath);
+        String DbName = "MIT_physics_rel";
+        String filePathPDF = "./PDF/";
+        String filePathCSV = "./CSV/";
 
-        downloadPDF("http://catalog.mit.edu/schools/science/physics/physics.pdf",FilePath);
-        File file = new File(FilePath);
+        String FilePathPdfRel = filePathPDF+DbName+".pdf";
+        String FilePathCSvRel = filePathCSV+DbName+".csv";
+
+        System.out.println(FilePathPdfRel);
+
+        String FilePathCsv = String.format("C:\\Final Year Project\\final-year-project-dump\\misc-scripts\\TextExtractorScript\\CSV\\%s",DbName+".csv");
+
+        downloadPDF("http://catalog.mit.edu/schools/science/physics/physics.pdf",FilePathPdfRel);
+        File file = new File(FilePathPdfRel);
         try (InputStream inputStream = new FileInputStream(file)) {
             //Increasing TIKA limit to 10000+
             StringWriter any = new StringWriter();
@@ -66,12 +74,16 @@ public class PdfExtractor {
 
             String textContent = handler.toString();
             System.out.println("Extracted text from PDF:");
-            System.out.println(textContent);
+            String oneLine = textContent.replace("\n", "");
+            String noComma = oneLine.replace(","," ");
+//            System.out.println(oneLine);
 
             System.out.println("Length of the data is " + textContent.length());
+            System.out.println("One Line of the data is " + oneLine.length());
+            System.out.println("No comma Line of the data is " + noComma.length());
 
-            StoreInDatabase.storeTextInDatabase(DbName,textContent);
-
+            StoreInDatabase.storeTextInDatabase(DbName,noComma);
+            Utilities.writeDataInCsv(FilePathCSvRel,DbName,noComma);
         } catch (Exception e) {
             e.printStackTrace();
         }
