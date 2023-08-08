@@ -44,6 +44,7 @@ public class PdfExtractor {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         // Replace "path/to/your/pdf/file.pdf" with the actual path to your PDF file
+
         String DbName = "MIT_physics";
 
         String FilePathAl = String.format("C:\\Final Year Project\\final-year-project-dump\\dataset\\PDF\\%s",DbName+".pdf");
