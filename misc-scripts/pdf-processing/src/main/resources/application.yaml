@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:postgresql://localhost:3306/jwt_security
+    url: jdbc:mysql://localhost:3306/pdf_database
     username: root
     password: compile1
   jpa:
@@ -11,8 +11,8 @@ spring:
     properties:
       hibernate:
         format_sql: true
-    database: postgresql
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
 
 server:
   port: 8080

@@ -2,6 +2,8 @@ package com.example.pdfprocessing.service;
 
 import com.example.pdfprocessing.GlobalVariables;
 import com.example.pdfprocessing.requestSchemas.PdfArrayJson;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.FileOutputStream;
@@ -14,7 +16,11 @@ import java.net.http.HttpResponse;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class PDFservices {
+
+    @Autowired
+    private final ExtractedDataPers databaseService;
 
     private static HttpRequest getHttpRequest(String uri) {
         return HttpRequest.newBuilder()
@@ -52,10 +58,12 @@ public class PDFservices {
         for (PdfArrayJson pdfArrayJson1: pdfArrayJson){
             String pdfName = pdfArrayJson1.getPdfName();
             String downloadURL = pdfArrayJson1.getDownloadURL();
-            String description = pdfArrayJson1.getDescription();
+//            String description = pdfArrayJson1.getDescription();
             String filePath = GlobalVariables.filePathPDF+pdfName+".pdf";
 
             downloadPDF(downloadURL,filePath);
+
+            databaseService.saveInDatabase(pdfArrayJson1,filePath);
         }
     }
 }
