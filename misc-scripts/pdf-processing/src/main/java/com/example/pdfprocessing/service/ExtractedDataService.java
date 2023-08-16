@@ -19,7 +19,7 @@ import java.io.StringWriter;
 @Data
 @RequiredArgsConstructor
 @Service
-public class ExtractedDataPers {
+public class ExtractedDataService {
 
     private final ExtractedDataRepository extractedDataRepository;
 

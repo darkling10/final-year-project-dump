@@ -20,7 +20,7 @@ import java.util.List;
 public class PDFservices {
 
     @Autowired
-    private final ExtractedDataPers databaseService;
+    private final ExtractedDataService databaseService;
 
     private static HttpRequest getHttpRequest(String uri) {
         return HttpRequest.newBuilder()
@@ -63,7 +63,7 @@ public class PDFservices {
 
             downloadPDF(downloadURL,filePath);
 
-            databaseService.saveInDatabase(pdfArrayJson1,filePath);
+           databaseService.saveInDatabase(pdfArrayJson1,filePath);
         }
     }
 }
