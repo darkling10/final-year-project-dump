@@ -17,11 +17,10 @@ import java.util.List;
 public class PDFservices {
 
     private static HttpRequest getHttpRequest(String uri) {
-        HttpRequest request = HttpRequest.newBuilder()
+        return HttpRequest.newBuilder()
                 .uri(URI.create(uri))
                 .GET()
                 .build();
-        return request;
     }
 
 
@@ -57,7 +56,6 @@ public class PDFservices {
             String filePath = GlobalVariables.filePathPDF+pdfName+".pdf";
 
             downloadPDF(downloadURL,filePath);
-
         }
     }
 }
