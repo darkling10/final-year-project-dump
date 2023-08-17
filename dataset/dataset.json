@@ -1,0 +1,54 @@
+[
+  {
+    "name": "PHY_MIT",
+    "pdfLink": "http://catalog.mit.edu/schools/science/physics/physics.pdf"
+  },{
+    "name": "CHEM_MIT",
+    "pdfLink": "http://catalog.mit.edu/schools/science/chemistry/chemistry.pdf"
+  },{
+    "name": "MAT_MIT",
+    "pdfLink": "http://catalog.mit.edu/schools/science/mathematics/mathematics.pdf"
+  },{
+    "name": "BIO_MIT",
+    "pdfLink": "http://catalog.mit.edu/schools/science/biology/biology.pdf"
+  },{
+    "name": "ECONOMICS_MIT",
+    "pdfLink": "http://catalog.mit.edu/schools/humanities-arts-social-sciences/economics/economics.pdf"
+  },{
+    "name": "HISTORY_MIT",
+    "pdfLink": "http://catalog.mit.edu/schools/humanities-arts-social-sciences/history/history.pdf"
+  },{
+  "name": "BIOENGINEERING_MIT",
+  "pdfLink": "http://catalog.mit.edu/subjects/20/20.pdf"
+},{
+  "name": "PHY_STANFORD",
+  "pdfLink": "https://web.stanford.edu/dept/registrar/bulletin_past/bulletin07-08/pdf/Physics.pdf"
+},{
+  "name": "CHEM_STANFORD",
+  "pdfLink": "https://web.stanford.edu/dept/registrar/bulletin_past/bulletin06-07/pdf/Chemistry.pdf"
+},{
+  "name": "MATHS_STANFORD",
+  "pdfLink": "https://web.stanford.edu/dept/registrar/bulletin_past/bulletin02-03/pdf/Math.pdf"
+},{
+  "name": "ENG_STANFORD",
+  "pdfLink": "https://web.stanford.edu/dept/registrar/bulletin_past/bulletin02-03/pdf/English.pdf"
+},{
+  "name": "PHY_HARVARD",
+  "pdfLink": "https://www.physics.harvard.edu/files/physics/files/spsbook22-23.pdf"
+},{
+  "name": "CHEM_HARVARD",
+  "pdfLink": "https://chemistry.harvard.edu/sites/hwpi.harvard.edu/files/chemistry/files/guide_to_chemistry_2022.pdf?m=1682052487"
+},{
+  "name": "PHY_CARNEGIE",
+  "pdfLink": "http://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscience/departmentofphysics/departmentofphysics.pdf"
+},{
+  "name": "CHEM_CARNEGIE",
+  "pdfLink": "http://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscience/departmentofchemistry/departmentofchemistry.pdf"
+},{
+  "name": "MAT_CARNEGIE",
+  "pdfLink": "http://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscience/departmentofmathematicalsciences/departmentofmathematicalsciences.pdf"
+},{
+  "name": "CS_CARNEGIE",
+  "pdfLink": "http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/courses.pdf"
+}
+]
