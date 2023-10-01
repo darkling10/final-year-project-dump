@@ -49,6 +49,51 @@
   "pdfLink": "http://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscience/departmentofmathematicalsciences/departmentofmathematicalsciences.pdf"
 },{
   "name": "CS_CARNEGIE",
-  "pdfLink": "http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/courses.pdf"
+  "pdfLink": "http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/courses.pdf",
+  "description": ""
+},{
+  "name": "BioEngg_MIT",
+  "pdfLink": "https://catalog.mit.edu/subjects/20/20.pdf",
+  "description": ""
+},{
+  "name": "Anthro_MIT",
+  "pdfLink": "http://catalog.mit.edu/subjects/21a/21a.pdf",
+  "description": ""
+},{
+  "name": "Architecture_MIT",
+  "pdfLink": "https://catalog.mit.edu/schools/architecture-planning/architecture/architecture.pdf",
+  "description": ""
+},{
+  "name": "Concourse_MIT",
+  "pdfLink": "https://catalog.mit.edu/subjects/cc/cc.pdf",
+  "description": ""
+},{
+  "name": "Humanities_MIT",
+  "pdfLink": "http://catalog.mit.edu/schools/humanities-arts-social-sciences/humanities/humanities.pdf",
+  "description": ""
+},{
+  "name": "Literature_MIT",
+  "pdfLink": "http://catalog.mit.edu/subjects/21l/21l.pdf",
+  "description": ""
+},{
+  "name": "Mnagement_MIT",
+  "pdfLink": "https://catalog.mit.edu/subjects/15/15.pdf",
+  "description": ""
+},{
+  "name": "MS_MIT",
+  "pdfLink": "http://catalog.mit.edu/subjects/ms/ms.pdf",
+  "description": ""
+},{
+  "name": "Mech_MIT",
+  "pdfLink": "https://catalog.mit.edu/subjects/2/2.pdf",
+  "description": ""
+},{
+  "name": "Edgerton_MIT",
+  "pdfLink": "https://catalog.mit.edu/subjects/ec/ec_coursestext.pdf",
+  "description": ""
+},{
+  "name": "Computatinal_MIT",
+  "pdfLink": "http://catalog.mit.edu/interdisciplinary/graduate-programs/computational-science-engineering/computational-science-engineering.pdf",
+  "description": ""
 }
 ]
