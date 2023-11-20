@@ -1,0 +1,6 @@
+2997, Rinky Kaur, Pune Womens 100m, 13910, 723
+2341, Suvarna Kale, Pune Womens 100m, 12830, 852
+3231, Aarti MK, Pune Womens 100m, 13310, 811
+2997, Rinky Kaur, Delhi Womens 100m, 12910, 843
+2341, Suvarna Kale, Delhi Womens 100m, 13130, 552
+2997, Rinky Kaur, Jakarta Womens 100m, 13030, 923
