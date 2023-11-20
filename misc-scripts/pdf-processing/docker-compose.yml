@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  my_sql:
+    container_name: mysqldb
+    image: mysql:5.7
+    environment:
+        MYSQL_ROOT_PASSWORD: compile1
+        MYSQL_DB: mysql
+
+    volumes:
+      - db_data:/var/lib/mysql
+
+  pdf_process:
+    container_name: pdf-process
+    image: pdf-processing:DockerFile
+    ports:
+      - 8080:8080
+volumes:
+      db_data:

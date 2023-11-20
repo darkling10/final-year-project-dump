@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/pdf_database
-    username: root
-    password: compile1
+    url: jdbc:mysql://multi-modal-learning-db.mysql.database.azure.com:3306/pdf_database
+    username: mypdfdatabase
+    password: Simbaa@12345
   jpa:
     hibernate:
       ddl-auto: update

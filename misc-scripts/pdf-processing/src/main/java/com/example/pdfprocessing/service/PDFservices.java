@@ -56,9 +56,9 @@ public class PDFservices {
 
     public void downloadPDFService(List<PdfArrayJson> pdfArrayJson) throws IOException, InterruptedException {
         for (PdfArrayJson pdfArrayJson1: pdfArrayJson){
-            String pdfName = pdfArrayJson1.getPdfName();
-            String downloadURL = pdfArrayJson1.getDownloadURL();
-//            String description = pdfArrayJson1.getDescription();
+            String pdfName = pdfArrayJson1.getName();
+            String downloadURL = pdfArrayJson1.getPdfLink();
+            String description = pdfArrayJson1.getDescription();
             String filePath = GlobalVariables.filePathPDF+pdfName+".pdf";
 
             downloadPDF(downloadURL,filePath);

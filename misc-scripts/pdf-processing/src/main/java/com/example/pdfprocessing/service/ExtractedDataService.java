@@ -48,7 +48,7 @@ public class ExtractedDataService {
             System.out.println("One Line of the data is " + oneLine.length());
             System.out.println("No comma Line of the data is " + noComma.length());
             pdfDataModel = PdfDataModel.builder()
-                    .subName(pdfArrayJson.getPdfName())
+                    .subName(pdfArrayJson.getName())
                     .description(pdfArrayJson.getDescription())
                     .dataFile(handler.toString().getBytes())
                     .build();

@@ -24,6 +24,6 @@ public class PdfProcess {
     @PostMapping("/download/json")
     public ResponseEntity<Object> downloadPDF(@RequestBody List<PdfArrayJson> pdfArrayJson) throws IOException, InterruptedException {
         pdFservices.downloadPDFService(pdfArrayJson);
-        return ResponseEntity.status(200).body(pdfArrayJson);
+        return ResponseEntity.status(201).body(pdfArrayJson);
     }
 }

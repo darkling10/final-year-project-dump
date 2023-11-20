@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @AllArgsConstructor
 public class PdfArrayJson {
-    private String pdfName;
-    private String downloadURL;
+    private String name;
+    private String pdfLink;
     private String description;
 }

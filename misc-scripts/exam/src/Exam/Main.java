@@ -1,53 +1,63 @@
-package Exam;/*
- * Save this in a file called Main.java and compile it. To test it
- * create the file `input.txt` in the workspace / Working Directory
- * (For Eclipse/VisualStudio, by default this is the top level project folder)
- */
-
-/* Do not add a package declaration */
+/* Save this in a file called Main.java to compile and test it */
 import java.util.*;
 import java.io.*;
 
-/* DO NOT CHANGE ANYTHING ABOVE THIS LINE */
-/* You may add any imports here, if you wish, but only from the
-   standard library */
-
-/* Do not add a namespace declaration */
 public class Main {
-    public static Map<String,Integer> processData(ArrayList<String> array) {
+    public static int processArray(ArrayList<Integer> array) {
         /*
+         * Do not make any changes outside this method.
+         *
          * Modify this method to process `array` as indicated
-         * in the question. At the end, return a Map containing
-         * the appropriate values
+         * in the question. At the end, return the new size of the
+         * array.
          *
-         * Please create appropriate classes, and use appropriate
-         * data structures as necessary.
+         * Do not print anything in this method
          *
-         * Do not print anything in this method.
-         *
-         * Submit this entire program (not just this method)
+         * Submit this entire program (not just this function)
          * as your answer
          */
+        int newSize = 0;      // Track the new size of the modified array
+        int currentSum = 0;   // Track the sum of consecutive numbers
+        boolean inSequence = false;  // Track if we are in a sequence
 
-        System.out.println(array);
-        Map<String,Integer> retVal = new HashMap<String,Integer>();
-        return retVal;
+        for (int i = 0; i < array.size(); i++) {
+            int num = array.get(i);
+
+            if (num < 100) {
+                currentSum += num;
+                inSequence = true;
+            } else {
+                if (inSequence) {
+                    array.set(newSize, currentSum);
+                    newSize++;
+                    currentSum = 0;
+                    inSequence = false;
+                }
+                array.set(newSize, num);
+                newSize++;
+            }
+        }
+
+        if (inSequence) {
+            array.set(newSize, currentSum);
+            newSize++;
+        }
+
+        return newSize;
     }
 
     public static void main (String[] args) {
-        ArrayList<String> inputData = new ArrayList<String>();
-        String line;
-        try {
-            Scanner in = new Scanner(new BufferedReader(new FileReader("input.txt")));
-            while(in.hasNextLine())
-                inputData.add(in.nextLine());
-            Map<String,Integer> retVal = processData(inputData);
-            PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter("output.txt")));
-            for(Map.Entry<String,Integer> e: retVal.entrySet())
-                output.println(e.getKey() + ": " + e.getValue());
-            output.close();
-        } catch (IOException e) {
-            System.out.println("IO error in input.txt or output.txt");
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        Scanner in = new Scanner(System.in);
+        while(in.hasNextInt()) {
+            int num = in.nextInt();
+            if (num < 0)
+                break;
+            arrayList.add(new Integer(num));
         }
+        int new_length = processArray(arrayList);
+
+        for(int i=0; i<new_length; i++)
+            System.out.println(arrayList.get(i));
     }
 }
